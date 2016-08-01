@@ -1,38 +1,38 @@
-// var userName = prompt('Hi there! What\'s your name?');
-//
-// alert('Welcome to my site, ' + userName + '. We\'re going to play a guessing game!');
-//
-// var questionOne = prompt('Is purple my favorite color?').toLowerCase();
-//
-// if (questionOne === 'y' || questionOne === 'yes') {
-//   alert('Congrats, you got that right. Purple\'s the best!');
-// } else {
-//   alert('Close, but no cigar.');
-// }
-//
-// var questionTwo = prompt('Do I like chocolate?').toLowerCase();
-//
-// if (questionTwo === 'n' || questionTwo === 'no') {
-//   alert('Correct! I know, it\'s weird.');
-// } else {
-//   alert('Nope! I\'ll pass on the chocolate... Hand over the Sour Patch Kids!');
-// }
-//
-// var questionThree = prompt('Do I own a PC?').toLowerCase();
-//
-// if (questionThree === 'y' || questionThree === 'yes') {
-//   alert('Nope. Mac is more my style.');
-// } else {
-//   alert('Correct! Mac is where it\'s at.');
-// }
-//
-// var questionFour = prompt('Am I a coffee drinker?').toLowerCase();
-//
-// if (questionFour === 'y' || questionFour === 'yes') {
-//   alert('You bet I am! That stuff is liquid gold in my book.');
-// } else {
-//   alert('Wrong! I drink that stuff on the daily.');
-// }
+var userName = prompt('Hi there! What\'s your name?');
+
+alert('Welcome to my site, ' + userName + '. We\'re going to play a guessing game!');
+
+var questionOne = prompt('Is purple my favorite color?').toLowerCase();
+
+if (questionOne === 'y' || questionOne === 'yes') {
+  alert('Congrats, you got that right. Purple\'s the best!');
+} else {
+  alert('Close, but no cigar.');
+}
+
+var questionTwo = prompt('Do I like chocolate?').toLowerCase();
+
+if (questionTwo === 'n' || questionTwo === 'no') {
+  alert('Correct! I know, it\'s weird.');
+} else {
+  alert('Nope! I\'ll pass on the chocolate... Hand over the Sour Patch Kids!');
+}
+
+var questionThree = prompt('Do I own a PC?').toLowerCase();
+
+if (questionThree === 'y' || questionThree === 'yes') {
+  alert('Nope. Mac is more my style.');
+} else {
+  alert('Correct! Mac is where it\'s at.');
+}
+
+var questionFour = prompt('Am I a coffee drinker?').toLowerCase();
+
+if (questionFour === 'y' || questionFour === 'yes') {
+  alert('You bet I am! That stuff is liquid gold in my book.');
+} else {
+  alert('Wrong! I drink that stuff on the daily.');
+}
 
 var questionFive = prompt('Name one of my favorite animals.').toLowerCase();
 

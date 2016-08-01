@@ -1,0 +1,22 @@
+body {
+  background-image: url('imgs/pdots.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Georgia;
+}
+
+h1 {
+  color: #FF005D
+}
+
+li {
+  list-style-type: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
