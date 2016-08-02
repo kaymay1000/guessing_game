@@ -9,7 +9,7 @@ h1 {
   color: #FF005D
 }
 
-li {
+ul > li {
   list-style-type: none;
 }
 
