@@ -1,9 +1,10 @@
 var correct = 0;
 var incorrect = 0;
 var numQuestions = 0;
+
 // //var attempts = 0;
 //
-// var userName = prompt('Hi there! What\'s your name?');
+var userName = prompt('Hi there! What\'s your name?');
 //
 // alert('Welcome to my site, ' + userName + '. We\'re going to play a guessing game!');
 //
@@ -16,7 +17,6 @@ var numQuestions = 0;
 //   console.log('q1 correct');
 // } else {
 //   alert('Close, but no cigar.');
-//   //correct--;
 //   incorrect++;
 //   console.log('q1 incorrect');
 // }
@@ -30,7 +30,6 @@ var numQuestions = 0;
 //   console.log('q2 correct');
 // } else {
 //   alert('Nope! I\'ll pass on the chocolate... Hand over the Sour Patch Kids!');
-//   //correct--;
 //   incorrect++;
 //   console.log('q2 incorrect');
 // }
@@ -40,7 +39,6 @@ var numQuestions = 0;
 //
 // if (questionThree === 'y' || questionThree === 'yes') {
 //   alert('Nope. Mac is more my style.');
-//   //correct--;
 //   incorrect++;
 //   console.log('q3 incorrect');
 // } else {
@@ -58,7 +56,6 @@ var numQuestions = 0;
 //   console.log('q4 correct');
 // } else {
 //   alert('Wrong! I drink that stuff on the daily.');
-//   //correct--;
 //   incorrect++;
 //   console.log('q4 incorrect');
 // }
@@ -73,7 +70,6 @@ var numQuestions = 0;
 // }
 // else {
 //   alert('Nope, nice try.');
-//   //correct--;
 //   incorrect++;
 //   console.log('q5 incorrect');
 // }
@@ -88,34 +84,37 @@ var numQuestions = 0;
 //   console.log('q6 correct');
 // } else {
 //   alert('Nope, not quite.');
-//   //correct--;
 //   incorrect++;
 //   console.log('q6 incorrect');
 // }
 
 var questionSeven = parseInt(prompt('Try to guess the number I\'m thinking of between 1 and 100.'));
 var myNum = 55;
+var guessCounter = 1;
 numQuestions++;
 
-while (questionSeven !== myNum) {
+while ((questionSeven !== myNum) && (guessCounter < 5)) {
   if (isNaN(questionSeven)) {
     questionSeven = parseInt(prompt('That\'s not a number! Try again.'));
-    //attempts++;
+    guessCounter++;
   }
   else if (questionSeven > myNum) {
     questionSeven = parseInt(prompt('That\'s too high! Try again.'));
-    //attempts++;
+    guessCounter++;
   }
-  else {
+  else if (questionSeven < myNum){
     questionSeven = parseInt(prompt('That\'s too low! Try again.'));
-    //attempts++;
+    guessCounter++;
   }
-  //correct--;
-  incorrect++;
-  console.log('inside while loop');
 }
-alert('Nice job! The number was 55.');
-correct++;
+
+if ((questionSeven !== myNum) && (guessCounter === 5)) {
+  alert('Sorry, you\'re out of guesses. Moving on!');
+  incorrect++;
+} else {
+  alert('Congrats! You guessed it right!');
+  correct++;
+}
 
 var questionEight = prompt('Can you guess one of my favorite flowers?').toLowerCase();
 var flowers = ['rose', 'peony', 'daisy', 'poppy', 'tulip'];
@@ -134,7 +133,6 @@ if (isTrue) {
   correct++;
 } else {
   alert('Sorry, that\'s not one of my favs.');
-  //correct--;
   incorrect++;
 }
 
