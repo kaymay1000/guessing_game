@@ -2,98 +2,83 @@ var correct = 0;
 var incorrect = 0;
 var numQuestions = 0;
 
-// //var attempts = 0;
-//
 var userName = prompt('Hi there! What\'s your name?');
-//
-// alert('Welcome to my site, ' + userName + '. We\'re going to play a guessing game!');
-//
-// var questionOne = prompt('Is purple my favorite color?').toLowerCase();
-// numQuestions++;
-//
-// if (questionOne === 'y' || questionOne === 'yes') {
-//   alert('Congrats, you got that right. Purple\'s the best!');
-//   correct++;
-//   console.log('q1 correct');
-// } else {
-//   alert('Close, but no cigar.');
-//   incorrect++;
-//   console.log('q1 incorrect');
-// }
-//
-// var questionTwo = prompt('Do I like chocolate?').toLowerCase();
-// numQuestions++;
-//
-// if (questionTwo === 'n' || questionTwo === 'no') {
-//   alert('Correct! I know, it\'s weird.');
-//   correct++;
-//   console.log('q2 correct');
-// } else {
-//   alert('Nope! I\'ll pass on the chocolate... Hand over the Sour Patch Kids!');
-//   incorrect++;
-//   console.log('q2 incorrect');
-// }
-//
-// var questionThree = prompt('Do I own a PC?').toLowerCase();
-// numQuestions++;
-//
-// if (questionThree === 'y' || questionThree === 'yes') {
-//   alert('Nope. Mac is more my style.');
-//   incorrect++;
-//   console.log('q3 incorrect');
-// } else {
-//   alert('Correct! Mac is where it\'s at.');
-//   correct++;
-//   console.log('q3 correct');
-// }
-//
-// var questionFour = prompt('Am I a coffee drinker?').toLowerCase();
-// numQuestions++;
-//
-// if (questionFour === 'y' || questionFour === 'yes') {
-//   alert('You bet I am! That stuff is liquid gold in my book.');
-//   correct++;
-//   console.log('q4 correct');
-// } else {
-//   alert('Wrong! I drink that stuff on the daily.');
-//   incorrect++;
-//   console.log('q4 incorrect');
-// }
-//
-// var questionFive = prompt('Name one of my favorite animals.').toLowerCase();
-// numQuestions++;
-//
-// if (questionFive === 'giraffe' || questionFive === 'dog' || questionFive === 'snake' || questionFive === 'otter') {
-//   alert('Nice job! That\'s definitely one of my favorites. Gotta love \'em!');
-//   correct++;
-//   console.log('q5 correct');
-// }
-// else {
-//   alert('Nope, nice try.');
-//   incorrect++;
-//   console.log('q5 incorrect');
-// }
-//
-// var questionSix = prompt('Name one of my favorite fruits.').toLowerCase();
-// var fruits = ['pineapple', 'peach', 'peaches', 'cherry', 'cherries'];
-// numQuestions++;
-//
-// if ((fruits.indexOf(questionSix) >= 0)) {
-//   alert('Nice guess! Deeeeelicious!');
-//   correct++;
-//   console.log('q6 correct');
-// } else {
-//   alert('Nope, not quite.');
-//   incorrect++;
-//   console.log('q6 incorrect');
-// }
+
+alert('Welcome to my site, ' + userName + '. We\'re going to play a guessing game!');
+
+var questionOne = prompt('Is purple my favorite color?').toLowerCase();
+numQuestions++;
+
+if (questionOne === 'y' || questionOne === 'yes') {
+  alert('Congrats, you got that right. Purple\'s the best!');
+  correct++;
+} else {
+  alert('Close, but no cigar.');
+  incorrect++;
+}
+
+var questionTwo = prompt('Do I like chocolate?').toLowerCase();
+numQuestions++;
+
+if (questionTwo === 'n' || questionTwo === 'no') {
+  alert('Correct! I know, it\'s weird.');
+  correct++;
+} else {
+  alert('Nope! I\'ll pass on the chocolate... Hand over the Sour Patch Kids!');
+  incorrect++;
+}
+
+var questionThree = prompt('Do I own a PC?').toLowerCase();
+numQuestions++;
+
+if (questionThree === 'y' || questionThree === 'yes') {
+  alert('Nope. Mac is more my style.');
+  incorrect++;
+} else {
+  alert('Correct! Mac is where it\'s at.');
+  correct++;
+}
+
+var questionFour = prompt('Am I a coffee drinker?').toLowerCase();
+numQuestions++;
+
+if (questionFour === 'y' || questionFour === 'yes') {
+  alert('You bet I am! That stuff is liquid gold in my book.');
+  correct++;
+} else {
+  alert('Wrong! I drink that stuff on the daily.');
+  incorrect++;
+}
+
+var questionFive = prompt('Name one of my favorite animals.').toLowerCase();
+numQuestions++;
+
+if (questionFive === 'giraffe' || questionFive === 'dog' || questionFive === 'snake' || questionFive === 'otter') {
+  alert('Nice job! That\'s definitely one of my favorites. Gotta love \'em!');
+  correct++;
+} else {
+  alert('Nope, nice try.');
+  incorrect++;
+}
+
+var questionSix = prompt('Name one of my favorite fruits.').toLowerCase();
+var fruits = ['pineapple', 'peach', 'peaches', 'cherry', 'cherries'];
+numQuestions++;
+
+if ((fruits.indexOf(questionSix) >= 0)) {
+  alert('Nice guess! Deeeeelicious!');
+  correct++;
+} else {
+  alert('Nope, not quite.');
+  incorrect++;
+}
 
 var questionSeven = parseInt(prompt('Try to guess the number I\'m thinking of between 1 and 100.'));
 var myNum = 55;
-var guessCounter = 1;
+var guessCounter = 0;
 numQuestions++;
 
-while ((questionSeven !== myNum) && (guessCounter < 5)) {
+while ((questionSeven !== myNum) && (guessCounter < 4)) {
   if (isNaN(questionSeven)) {
     questionSeven = parseInt(prompt('That\'s not a number! Try again.'));
     guessCounter++;
@@ -108,7 +93,7 @@ while ((questionSeven !== myNum) && (guessCounter < 5)) {
   }
 }
 
-if ((questionSeven !== myNum) && (guessCounter === 5)) {
+if ((questionSeven !== myNum) && (guessCounter === 4)) {
   alert('Sorry, you\'re out of guesses. Moving on!');
   incorrect++;
 } else {
