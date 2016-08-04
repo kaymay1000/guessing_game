@@ -63,10 +63,10 @@ function questionFour(){
 questionFour();
 
 function questionFive(){
-  var questionFive = prompt('Name one of my favorite animals.').toLowerCase();
+  var answerFive = prompt('Name one of my favorite animals.').toLowerCase();
   numQuestions++;
 
-  if (questionFive === 'giraffe' || questionFive === 'dog' || questionFive === 'snake' || questionFive === 'otter') {
+  if (answerFive === 'giraffe' || answerFive === 'dog' || answerFive === 'snake' || answerFive === 'otter') {
     alert('Nice job! That\'s definitely one of my favorites. Gotta love \'em!');
     correct++;
   } else {
@@ -76,47 +76,52 @@ function questionFive(){
 }
 questionFive();
 
+function questionSix(){
+  var answerSix = prompt('Name one of my favorite fruits.').toLowerCase();
+  var fruits = ['pineapple', 'peach', 'peaches', 'cherry', 'cherries'];
+  numQuestions++;
 
-// var questionSix = prompt('Name one of my favorite fruits.').toLowerCase();
-// var fruits = ['pineapple', 'peach', 'peaches', 'cherry', 'cherries'];
-// numQuestions++;
-//
-// if ((fruits.indexOf(questionSix) >= 0)) {
-//   alert('Nice guess! Deeeeelicious!');
-//   correct++;
-// } else {
-//   alert('Nope, not quite.');
-//   incorrect++;
-// }
-//
-// var questionSeven = parseInt(prompt('Try to guess the number I\'m thinking of between 1 and 100.'));
-// var myNum = 55;
-// var guessCounter = 0;
-// numQuestions++;
-//
-// while ((questionSeven !== myNum) && (guessCounter < 4)) {
-//   if (isNaN(questionSeven)) {
-//     questionSeven = parseInt(prompt('That\'s not a number! Try again.'));
-//     guessCounter++;
-//   }
-//   else if (questionSeven > myNum) {
-//     questionSeven = parseInt(prompt('That\'s too high! Try again.'));
-//     guessCounter++;
-//   }
-//   else if (questionSeven < myNum){
-//     questionSeven = parseInt(prompt('That\'s too low! Try again.'));
-//     guessCounter++;
-//   }
-// }
-//
-// if ((questionSeven !== myNum) && (guessCounter === 4)) {
-//   alert('Sorry, you\'re out of guesses. Moving on!');
-//   incorrect++;
-// } else {
-//   alert('Congrats! You guessed it right!');
-//   correct++;
-// }
-//
+  if ((fruits.indexOf(answerSix) >= 0)) {
+    alert('Nice guess! Deeeeelicious!');
+    correct++;
+  } else {
+    alert('Nope, not quite.');
+    incorrect++;
+  }
+}
+questionSix();
+
+function questionSeven(){
+  var answerSeven = parseInt(prompt('Try to guess the number I\'m thinking of between 1 and 100.'));
+  var myNum = 55;
+  var guessCounter = 0;
+  numQuestions++;
+
+  while ((answerSeven !== myNum) && (guessCounter < 4)) {
+    if (isNaN(answerSeven)) {
+      answerSeven = parseInt(prompt('That\'s not a number! Try again.'));
+      guessCounter++;
+    }
+    else if (answerSeven > myNum) {
+      answerSeven = parseInt(prompt('That\'s too high! Try again.'));
+      guessCounter++;
+    }
+    else if (answerSeven < myNum){
+      answerSeven = parseInt(prompt('That\'s too low! Try again.'));
+      guessCounter++;
+    }
+  }
+
+  if ((answerSeven !== myNum) && (guessCounter === 4)) {
+    alert('Sorry, you\'re out of guesses. Moving on!');
+    incorrect++;
+  } else {
+    alert('Congrats! You guessed it right!');
+    correct++;
+  }
+}
+questionSeven();
+
 // var questionEight = prompt('Can you guess one of my favorite flowers?').toLowerCase();
 // var flowers = ['rose', 'peony', 'daisy', 'poppy', 'tulip'];
 // var isTrue = false;
