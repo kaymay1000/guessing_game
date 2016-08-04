@@ -122,30 +122,33 @@ function questionSeven(){
 }
 questionSeven();
 
-// var questionEight = prompt('Can you guess one of my favorite flowers?').toLowerCase();
-// var flowers = ['rose', 'peony', 'daisy', 'poppy', 'tulip'];
-// var isTrue = false;
-// numQuestions++;
-//
-// for (var i = 0; i < flowers.length; i++) {
-//   if (questionEight === flowers[i]) {
-//     isTrue = true;
-//     break;
-//   }
-// }
-//
-// if (isTrue) {
-//   alert('Congrats, that\'s one of my favs! So pretty.');
-//   correct++;
-// } else {
-//   alert('Sorry, that\'s not one of my favs.');
-//   incorrect++;
-// }
-//
-// if (correct === 8) {
-//   alert('Awesome job, ' + userName + '. You scored a perfect ' + (numQuestions - incorrect) + ' out of ' + numQuestions + '. Thanks for playin\'!');
-// } else if (correct >= 6 && correct < 8) {
-//   alert('Nice job, ' + userName + '. You scored a ' + (numQuestions - incorrect) + ' out of ' + numQuestions + '. Thanks for playin\'!');
-// } else if (correct < 6) {
-//   alert('Better luck next time, ' + userName + '. You scored a ' + (numQuestions - incorrect) + ' out of ' + numQuestions + '. Thanks for playin\'!');
-// }
+function questionEight(){
+  var answerEight = prompt('Can you guess one of my favorite flowers?').toLowerCase();
+  var flowers = ['rose', 'peony', 'daisy', 'poppy', 'tulip'];
+  var isTrue = false;
+  numQuestions++;
+
+  for (var i = 0; i < flowers.length; i++) {
+    if (answerEight === flowers[i]) {
+      isTrue = true;
+      break;
+    }
+  }
+
+  if (isTrue) {
+    alert('Congrats, that\'s one of my favs! So pretty.');
+    correct++;
+  } else {
+    alert('Sorry, that\'s not one of my favs.');
+    incorrect++;
+  }
+
+  if (correct === 8) {
+    alert('Awesome job, ' + userName + '. You scored a perfect ' + (numQuestions - incorrect) + ' out of ' + numQuestions + '. Thanks for playin\'!');
+  } else if (correct >= 6 && correct < 8) {
+    alert('Nice job, ' + userName + '. You scored a ' + (numQuestions - incorrect) + ' out of ' + numQuestions + '. Thanks for playin\'!');
+  } else if (correct < 6) {
+    alert('Better luck next time, ' + userName + '. You scored a ' + (numQuestions - incorrect) + ' out of ' + numQuestions + '. Thanks for playin\'!');
+  }
+}
+questionEight();
